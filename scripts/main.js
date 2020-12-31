@@ -1,19 +1,19 @@
 let myImage = document.querySelector('img');
 myImage.onclick = function(){
 	let mySrc = myImage.getAttribute('src');
-	if(mySrc ==='images/render6.1.png'){
-		myImage.setAttribute('src', 'images/render3.png')
+	if(mySrc ==='images/profile.jpg'){
+		myImage.setAttribute('src', 'images/profile1.jpg')
 	}else{
-		myImage.setAttribute('src', 'images/render6.1.png')
+		myImage.setAttribute('src', 'images/profile.jpg')
 	}
 }
 function setHeading(name) {
   let myHeading = document.querySelector('h1');
-  myHeading.textContent = name + '的Blender学习日记';
+  myHeading.textContent = 'Welcome '+name+'!';
 }
 
 function setUserName() {
-  let myName = prompt('请输入你的名字');
+  let myName = prompt('please input your name');
   localStorage.setItem('name', myName);
   setHeading(myName);
 } 
@@ -22,7 +22,7 @@ let storedName = localStorage.getItem('name');
 if(!storedName) {
    setUserName();
 } else {
-   setHeading(storedName);
+   //setHeading(storedName);
 }
 
 let myButton = document.querySelector('button'); 
